@@ -69,6 +69,7 @@ new LR('contributors.photos.create')
   })
 ```
 
+
 ### Available API:
 
 <table>
@@ -98,6 +99,12 @@ new LR('contributors.photos.create')
 	</tr>
 </table>
 
+
 #### **NOTES**: 
 
 1. `onInit` and `docReady` have access to receive an parameter that reference the instance itself.
+
+
+## License
+
+MIT
