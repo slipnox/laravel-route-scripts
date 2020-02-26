@@ -6,15 +6,28 @@ Sometimes you don't have a running SPA in your Laravel app but you want to run m
 
 ## Installation
 
-1. Install as dependency: `npm instal laravel-route-scripts --save-dev` or `yarn add laravel-route-scripts --dev`
+1. Install as dependency:
+```bash
+npm instal laravel-route-scripts --save-dev
+```
+ 
+ or 
+ 
+```bash
+ yarn add laravel-route-scripts --dev
+```
 
 ## Usage
 
-1. In your main view layout blade file you must set to any element the attribute: `data-laravel-route-name="{{ Route::currentRouteName() }}"`. You can get all your routes name by running `php artisan route:list`
+1. In your main view layout blade file you must set to any element the attribute: `data-laravel-route-name="{{ Route::currentRouteName() }}"`. You can get all your routes name by running `php artisan route:list`.
+
 2. Then just need to create a javascrtipt file on any location inside `resources/js` and import it in your mail js file.
-3. Import in your new file the library. Example: `import LR from 'laravel-route-scripts'`
+
+3. Import in your new file the library. Example: `import LR from 'laravel-route-scripts'`.
+
 4. In the new file create a new instance `new LR('laravel.name.route').onInit(() => { console.log('js code here') })`, if you need to run the same code on several routes you can also use an array of route names in the constructor function.
-4. You can chain this methods: `onInit` or `docReady` with a callback with your code.
+
+5. You can chain this methods: `onInit` or `docReady` with a callback with your code.
 
 
 ### How it works
@@ -25,8 +38,8 @@ Sometimes you don't have a running SPA in your Laravel app but you want to run m
 > `data-laravel-route-name="{{ Route::currentRouteName() }}"` will create this attribute.
 ![](https://raw.githubusercontent.com/slipnox/laravel-route-scripts/master/dist/assets/attribute.png) 
 
-
 > **New imported file example.**
+
 ```js
 import LR from 'laravel-route-scripts';
 
