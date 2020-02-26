@@ -1,14 +1,15 @@
 {
   "name": "laravel-route-scripts",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This package helps to execute Javascript with all the power of laravel mix webpack in your Laravel Names Routes.",
   "main": "index.js",
   "types": "./types/laravel-route-scripts.d.ts",
+  "typings": "./types/laravel-route-scripts.d.ts",
   "scripts": {
     "build": "./node_modules/.bin/tsc -p ./tsconfig.json",
     "watch": "./node_modules/.bin/tsc -w -p ./tsconfig.json"
   },
-  "keywords": [],
+  "keywords": ["laravel", "routes", "route", "scripts"],
   "author": "Abrahan Silverio",
   "license": "MIT",
   "bugs": {
