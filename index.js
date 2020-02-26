@@ -1,1 +1,1 @@
-module.exports = require('./lib/laravel-route-scripts');
+module.exports = require('./dist/laravel-route-scripts');
