@@ -21,7 +21,7 @@ var LaraRoutesScripts = /** @class */ (function () {
             return this.$vi;
         }
         catch (e) {
-            console.warn("LaravelRoutes: There is a problem loading VueJS please add Vue to your dependencies.");
+            console.warn("LaravelRouteScripts: There is a problem loading VueJS please add Vue to your dependencies.");
         }
     };
     LaraRoutesScripts.prototype.docReady = function (docReadyFn) {
@@ -64,7 +64,7 @@ var LaraRoutesScripts = /** @class */ (function () {
         this.routeElement !== null
             // @ts-ignore
             ? this.routeName = this.routeElement.dataset[this._convertToCammelCase(this.dataAttrName)]
-            : console.warn("LaravelRoutes: in your views layouts you must to set to any element the attribute: data-laravel-route-name=\"{{ Route::currentRouteName() }}\"");
+            : console.warn("LaravelRouteScripts: in your views layouts you must to set to any element the attribute: data-laravel-route-name=\"{{ Route::currentRouteName() }}\"");
     };
     LaraRoutesScripts.prototype._convertToCammelCase = function (str) {
         return str.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase(); });
