@@ -19,11 +19,11 @@ Sometimes you don't have a running SPA in your Laravel app but you want to run m
 
 ### How it works
 > `php artisan route list` - Run this command to locate your target route name in this example we use: contributors.photos.create
-![](dist/assets/routelist.png) 
+![](https://raw.githubusercontent.com/slipnox/laravel-route-scripts/master/dist/assets/routelist.png) 
 
 
 > `data-laravel-route-name="{{ Route::currentRouteName() }}"` will create this attribute.
-![](dist/assets/attribute.png) 
+![](https://raw.githubusercontent.com/slipnox/laravel-route-scripts/master/dist/assets/attribute.png) 
 
 
 > **New imported file example.**
