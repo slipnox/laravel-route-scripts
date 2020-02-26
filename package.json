@@ -3,8 +3,10 @@
   "version": "1.0.1",
   "description": "This package helps to execute Javascript with all the power of laravel mix webpack in your Laravel Names Routes.",
   "main": "index.js",
+  "types": "./types/laravel-route-scripts.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "./node_modules/.bin/tsc -p ./tsconfig.json",
+    "watch": "./node_modules/.bin/tsc -w -p ./tsconfig.json",
   },
   "keywords": [],
   "author": "Abrahan Silverio",
@@ -14,6 +16,8 @@
   },
   "homepage": "https://github.com/slipnox/laravel-route-scripts",
   "dependencies": {
+    "@types/node": "^13.7.6",
+    "typescript": "^3.8.2",
     "vue": "^2.6.11"
   }
 }
