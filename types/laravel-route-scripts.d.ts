@@ -8,7 +8,7 @@ declare class LaraRoutesScripts {
     private routeElement;
     constructor(routes: any);
     onInit(initFn: any): this;
-    initVue(vueProps: any): object;
+    initVue(Vue: any, vueProps?: {}): object;
     docReady(docReadyFn: any): this;
     getCurrentRouteName(): any;
     enableVueDev(): this;

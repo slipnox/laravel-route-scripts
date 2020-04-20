@@ -8,8 +8,14 @@ class LaraRoutesScripts {
     private routeElement: Element;
 
     constructor(routes) {
-        this.intendedScriptRoute = routes;
-        this._setRoutes()
+        if (routes) {
+            this.intendedScriptRoute = routes;
+            this._setRoutes()
+        } else {
+            console.warn(`LaravelRouteScripts: No route specified please add route name string or array of route names strings.`)
+        }
+
+        return this
     }
 
     //------------------ HELPERS
@@ -20,17 +26,12 @@ class LaraRoutesScripts {
         return this
     }
 
-    initVue(vueProps) {
-        let Vue = require('vue');
-
-        try {
-            // @ts-ignore
-            window.Vue = Vue
+    initVue(Vue, vueProps = {}) {
+        if (Vue) {
             this.$vi = new Vue(vueProps);
             return this.$vi
-        } catch (e) {
-            console.warn(`LaravelRouteScripts: There is a problem loading VueJS please add Vue to your dependencies.`)
         }
+        console.warn(`LaravelRouteScripts: There is a problem loading VueJS please add Vue to your dependencies.`)
     }
 
     docReady(docReadyFn) {
